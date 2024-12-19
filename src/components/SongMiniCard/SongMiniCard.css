@@ -1,0 +1,31 @@
+
+
+.song-card-container{
+    width : max(450px);
+    margin :  0.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    gap : 0.5rem;
+    padding : 0.5rem 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.song-card-container img{
+    width : 50px;
+    background-color: tomato;
+    border-radius: 0.5rem;
+}
+
+.song-card-song-name {
+    font-weight: 900;
+}
+.song-card-song-name ~ p{
+    font-weight: 400;
+}
+
+#song-card-play-button{
+    font-size : 2rem;
+    color : tomato;
+}

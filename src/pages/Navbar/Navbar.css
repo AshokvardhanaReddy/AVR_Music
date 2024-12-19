@@ -1,0 +1,15 @@
+/* 
+.navbar-container{
+    width : 95%;
+    margin : auto;
+}
+
+
+
+
+@media screen and (max-width : 750px){
+    .navbar-container{
+        width : 100%;
+        margin : auto;
+    }
+} */

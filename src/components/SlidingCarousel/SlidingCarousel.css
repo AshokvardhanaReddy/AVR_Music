@@ -1,0 +1,91 @@
+.carousel-container {
+    margin-bottom : 01rem;
+}
+.carousel-heading{
+    /* border : 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding : 0rem 0.5rem;
+}
+
+.carousel-heading p{
+    font-size : 1.2rem;
+    font-weight: 800;
+}
+
+.carousel-icons-div{
+    display: flex;
+    gap : 2rem;
+}
+.arrow-icons{
+    font-size : 1.2rem;
+    cursor: pointer;
+    &:hover{
+        color : tomato;
+    }
+}
+
+.carousel-content{
+    display: flex;
+    gap : 0.5rem;
+    overflow: scroll;
+    padding : 0.5rem;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+
+@media screen and (max-width : 320px){
+    .carousel-heading{
+        padding : 0rem 0rem;
+    }
+    .carousel-heading p{
+        font-size : 0.75rem;
+    }
+    .carousel-icons-div{
+        gap : 1.5rem;
+    }
+    .arrow-icons{
+        display: none;
+    }
+    .carousel-content{
+        padding: 0.25rem 0rem 0rem 0rem;
+    }
+}
+
+@media screen and (min-width :321px) and (max-width : 750px){
+    .carousel-heading{
+        padding : 0rem 0rem;
+    }
+    .carousel-heading p{
+        font-size : 1rem;
+    }
+    .carousel-icons-div{
+        gap : 1.5rem;
+    }
+    .arrow-icons{
+        display: none;
+    }
+    .carousel-content{
+        padding : 0.5rem 0rem 0rem 0rem;
+    }
+}
+
+@media screen and (min-width : 751px) and (max-width : 1024px){
+    .carousel-heading{
+        padding : 0rem 0.25rem;
+    }
+    .carousel-heading p{
+        font-size : 1.1rem;
+    }
+    .carousel-icons-div{
+        gap : 1.5rem;
+    }
+    .arrow-icons{
+        font-size : 1.1rem;
+    }
+    .carousel-content{
+        padding : 0rem;
+    }
+}
