@@ -1,12 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400&display=swap');
 *{
     box-sizing: border-box;
     margin : 0;
     padding: 0;
     font-family: "Poppins", serif;
-  
+    background-color: #ebeae6;
+}
+
+:root{
+    --bg-primary  : #ebeae6;
+    --font-heading : "Lato", serif;
 }
 
 html{
@@ -20,6 +28,7 @@ a{
 
 body{
     font-size : 1rem;
+    color: #5D5D5B;
 }
 
 @media screen and (max-width : 320px){
@@ -34,8 +43,8 @@ body{
     }
 }
 
-@media screen and (min-width : 751px) and (max-width : 1024px){
+@media screen and (min-width : 751px) {
     body{
-        font-size : 0.9rem;
+        font-size : 0.85rem;
     }
 }

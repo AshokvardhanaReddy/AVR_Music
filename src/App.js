@@ -1,22 +1,34 @@
-import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
-import Navbar from "./pages/Navbar/Navbar";
-
-import {Routes, Route} from "react-router-dom";
+import "./App.css";
+import { useContext } from "react";
+import { PlayerContext } from "./context/PlayerContext";
+import LogoNavbar from "./components/LogoNavbar";
+import Sidebar from "./components/Sidebar";
+import Display from "./components/Display";
+import Player from "./components/Player";
+import LoginPortal from "./pages/LoginPage";
 
 function App() {
+  const { audioRef, track, isLoginPortal} = useContext(PlayerContext);
+console.log(isLoginPortal);
   return (
-   <>
-   <Navbar/>
-   <Routes>
-    <Route path = "/" element = {<></>} />
-    <Route path = "/albums" element = {<></>} />
-    <Route path = "/artists" element = {<></>} />
-    <Route path = "/genres" element = {<></>} />
-    <Route path = "/recent-play" element = {<></>} />
-    <Route path = "/favourites" element = {<></>} />
-   </Routes>
-   
-   </>
+    <>
+      <div className="main-container">
+        <div className="nav-div">
+          <LogoNavbar/>
+        </div>
+        <div className="sidebar-div">
+          <Sidebar/>
+        </div>
+        <div className="content-div">
+          <Display/>
+        </div>
+        <div className="player-div">
+          <Player/>
+          <audio ref={audioRef} preload="auto" src={track.file}></audio>
+        </div>
+      </div>
+      {isLoginPortal ? <LoginPortal/> : undefined}
+    </>
   );
 }
 
