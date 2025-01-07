@@ -5,7 +5,8 @@ export const PlayerContext = createContext();
 
 const PlayerContextProvider = (props) => {
 
-    const url = "https://srfrozenfoods-server.netlify.app/api/";
+    // const url = "https://srfrozenfoods-server.netlify.app/api/";
+    const url = process.env.BACKEND_SERVER_URL;
 
     const audioRef = useRef();
     const seekBg = useRef();
@@ -87,7 +88,7 @@ const PlayerContextProvider = (props) => {
     const contextValue = {
        url,user, setUser, token, setToken, showLogin, setShowLogin, audioRef, track, setTrack, playStatus, setPlayStatus, next, previous, play, pause, playWithId, seekBar, seekBg, seekSong, time, isLoginPortal, setIsLoginPortal
     }
-console.log(user);
+
     return (
         <PlayerContext.Provider value={contextValue}>
             {props.children}
