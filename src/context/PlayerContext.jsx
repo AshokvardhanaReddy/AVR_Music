@@ -5,8 +5,8 @@ export const PlayerContext = createContext();
 
 const PlayerContextProvider = (props) => {
 
-    // const url = "https://srfrozenfoods-server.netlify.app/api/";
-    const url = process.env.BACKEND_SERVER_URL
+    const url = "https://srfrozenfoods-server.netlify.app/api/";
+    // const url = process.env.BACKEND_SERVER_URL
 
     const audioRef = useRef();
     const seekBg = useRef();

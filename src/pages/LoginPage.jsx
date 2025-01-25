@@ -8,6 +8,7 @@ export const LoginPage = () => {
     useContext(PlayerContext);
 
   const [currState, setCurrState] = useState("Sign Up");
+  const [isUserValid, setIsUserValid] = useState(true);
 
   const [data, setData] = useState({
     user_name: "",
@@ -25,7 +26,6 @@ export const LoginPage = () => {
 
   const onLogin = async (e) => {
     e.preventDefault();
-    // let new_url = url;
 
     if (currState === "Sign Up") {
       await fetch(`${url}users`, {
@@ -44,28 +44,36 @@ export const LoginPage = () => {
 
       setCurrState("Login");
     }
+
     if (currState === "Login") {
-      const users = await fetch(`${url}users`)
-        .then((res) => res.json())
-        .then((data) => data);
-      users.forEach((user) => {
-        if (
-          data.user_id === user.user_id &&
-          data.user_password === user.user_password
-        ) {
+      try {
+        const response = await fetch(`${url}users`);
+        const users = await response.json();
+
+        const matchingUser = users.find(
+          (user) =>
+            data.user_id === user.user_id && data.user_password === user.user_password
+        );
+
+        if (matchingUser) {
           setIsLoginPortal(false);
           setToken(true);
-          setUser(user);
+          setUser(matchingUser);
+        } else {
+          setIsUserValid(false);
         }
-      });
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
     }
+    
   };
-
+console.log(isUserValid);
   return (
     <div className="absolute top-[0%] z-[1000] w-full h-screen bg-[#00000090] grid">
       <form
         onSubmit={onLogin}
-        className="place-self-center w-[max(23vw,330px)] text-[#808080] bg-[white] flex flex-col gap-[25px] animate-[fadeIn_0.5s] px-[30px] py-[25px] rounded-lg sm:w-[max(70%,30px)] sm:px-[15px] py-[15px] "
+        className="place-self-center w-[max(23vw,330px)] text-[#808080] bg-[white] flex flex-col gap-[25px] animate-[fadeIn_0.5s] px-[30px]  rounded-lg sm:w-[max(70%,30px)] sm:px-[15px] py-[25px] "
       >
         <div className=" bg-inherit flex justify-between items-center text-[black] ">
           <h2 className="bg-inherit text-2xl font-black sm:text-base">
@@ -114,6 +122,8 @@ export const LoginPage = () => {
           {currState === "Login" ? "Login" : "Create account"}
         </button>
 
+{isUserValid ?  undefined : <p className="text-center text-red-600 bg-white" >Invalid User Details</p>}
+         
         {currState === "Login" ? (
           <p className="bg-inherit">
             Create a new account?{" "}

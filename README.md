@@ -1,16 +1,16 @@
 <div align="center">
-<h1>AVR Blogs</h1>
+<h1>AVR Music</h1>
 </div>
 
 
 <div align="center">
-  <a href="https://avrblogs.netlify.app/">Live Preview</a>
+  <a href="https://avrmusic.netlify.app/">Live Preview</a>
 </div>
 
 <hr>
 
 ## ⚡  About
-A modern and responsive blog website built to showcase content effectively, featuring an intuitive user interface and seamless navigation. The platform allows users to explore articles by categories, search for topics, and read engaging blog posts. Key features include:
+The AVR Music Player is a sleek and intuitive web application designed to deliver a seamless music listening experience. It allows users to play, pause, skip tracks, and view song details such as title, artist, and album cover. Built with a focus on usability and responsive design, the music player adapts effortlessly to both desktop and mobile devices.
 
 <hr>
 
@@ -39,19 +39,14 @@ A modern and responsive blog website built to showcase content effectively, feat
 
 ## 👉 Features
 
-- **Home Page:** Displays the most recent or featured blog entries and provides easy navigation by emphasizing popular tags or categories.
+- **Home Page:** Displays the most recent or featured songs, playlists, or albums, providing easy navigation by emphasizing popular or trending tracks.
 
-- **Responsive Design:** Design with a mobile-first approach, incorporating an adaptive layout to provide a consistent experience on all devices.
+- **Responsive Design:** Built with a mobile-first approach, ensuring a consistent and seamless user experience across devices of all sizes.
 
-- **User Authentication :** Login and register functionality for authors or readers. Profile page for managing user accounts.
+- **User Authentication :** Login and register functionality for users. A profile page to manage user preferences, playlists, and listening history.
 
-- **Comments Section:** Readers can leave comments on blog posts.
-
-- **Social Media Integration:** Share posts directly to social platforms. Social media links for the blog or author profiles.
-
-- **Search Functionality:** Users can search blog posts by keywords.
-
-- **Analytics Dashboard:** View statistics like page views, most-read posts, and user engagement.
+- **Recent Playlists Feature:** Displays a curated list of the most recently created or played playlists. Users can quickly resume listening or edit their playlists. It includes a "Continue Playing" button for seamless playback from where the user left off.
+- **Search Functionality:**  Allows users to search for songs, artists, or albums by keywords.
 
 <hr>
 
@@ -77,13 +72,13 @@ A modern and responsive blog website built to showcase content effectively, feat
 
 ## 💡 Inspiration
 
-- Medium
-- Dev.com
-- w3schools.com    etc...
+- JioSavaan
+- Spotify
+- Wynk Music    etc...
 
 
 <hr>
 
 ## 🔧 Project Status
 - Project Deployed
-- Working on Addition Fetatures  ⏳ 
+- Working on Additional Fetatures  ⏳ 
