@@ -1,0 +1,83 @@
+
+
+.mp-layout-container{
+    width : 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 18% calc(100vw - 18%);
+    grid-template-rows: 86px auto 85.6px;
+    grid-template-areas: 
+    "navbar navbar"
+    "sidemenu content"
+    "player player";
+
+}
+
+.mp-layout-navbar{
+    grid-area: navbar;
+    height: 100px;
+}
+.mp-layout-sidemenu{
+    grid-area: sidemenu;
+    background-color: #ebeae6;
+
+}
+.mp-layout-content{
+    grid-area: content;
+    background-color: #EBEAE6;
+    overflow: scroll;
+    scrollbar-width: none;
+
+}
+.mp-layout-player{
+    grid-area: player;
+}
+
+
+@media screen and (min-width : 751px) and (max-width : 1024px){
+    .mp-layout-container{
+        grid-template-columns: 15% auto;
+        grid-template-rows: 77.5px auto 84px;
+        grid-template-areas: 
+        "navbar navbar"
+        "sidemenu content"
+        "player player";
+    }
+    
+    .mp-layout-navbar{
+        height: 100px;
+    }
+  
+}
+
+@media screen and (min-width : 321px) and (max-width : 750px){
+    .mp-layout-container{
+        grid-template-columns: 100vw;
+        grid-template-rows: 52.4px auto 66px 60.8px;
+        grid-template-areas: 
+        "navbar navbar"
+        "content content"
+        "player player"
+        "sidemenu sidemenu";
+    }
+    
+    .mp-layout-navbar{
+        height: 100px;
+    }
+}
+
+
+@media screen and (max-width : 320px){
+    .mp-layout-container{
+        grid-template-columns: 100vw;
+        grid-template-rows: 35.3px auto 39px 50px;
+        grid-template-areas: 
+        "navbar navbar"
+        "content content"
+        "player player"
+        "sidemenu sidemenu";
+    }
+    .mp-layout-navbar{
+        height: 100px;
+    }
+}

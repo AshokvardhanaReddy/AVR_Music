@@ -20,6 +20,9 @@
     text-align: center;
     font-weight: 500;
     padding : 0rem 0rem 0.25rem 0rem;
+    white-space: nowrap;
+  overflow: hidden; /* Optionally hide overflow if text exceeds the container */
+  text-overflow: ellipsis; /* Optionally add ellipsis for overflowing text */
 }
 
 .song-movie-name{

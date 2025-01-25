@@ -1,16 +1,14 @@
 
 
 import "./SlidingCarousel.css";
-import music_image from "../../assests/music_image.png";
-
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
-
-import React from 'react'
-
 import SongTitleCard from "../SongTitleCard/SongTitleCard";
+import { StoreContext } from "../../context/StoreContext";
 
-const SlidingCarousel = ({title}) => {
-  
+import React, { useContext, useEffect} from 'react'
+
+const SlidingCarousel = ({title, trendingList}) => {
+// console.log(trendingList);
   const handleScrollLeft = () => {
     document.getElementById("carousel-content-scroll").scrollLeft -= 300;
   };
@@ -18,6 +16,7 @@ const SlidingCarousel = ({title}) => {
   const handleScrollRight = () => {
     document.getElementById("carousel-content-scroll").scrollLeft += 300;
   };
+
   return (
     <section className = "carousel-container" >
     <div className="carousel-heading">
@@ -34,19 +33,8 @@ const SlidingCarousel = ({title}) => {
       </div>
     </div>
     <div className="carousel-content " id="carousel-content-scroll">
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
-      <SongTitleCard/>
+
+{trendingList.map((album) => <SongTitleCard key = {album.id} song_id = {album.album.id} url = {album.href} image = {album.album.images[0].url} name = {album.name} subName = {album.total_tracks} type = {album.type} />)}
     </div>
   </section>
   )

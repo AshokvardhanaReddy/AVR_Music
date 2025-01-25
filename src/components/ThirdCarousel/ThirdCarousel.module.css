@@ -1,9 +1,7 @@
-.carousel-container {
-    margin-bottom : 01rem;
-   
+.third-carousel-container {
+    margin-bottom : 1rem;
 }
 .carousel-heading{
-    /* border : 1px solid red; */
     display: flex;
     justify-content: space-between;
     place-items: center;
@@ -13,6 +11,8 @@
 .carousel-heading p{
     font-size : 1.2rem;
     font-weight: 800;
+    
+    border : 1px solid red;
 }
 
 .carousel-icons-div{
